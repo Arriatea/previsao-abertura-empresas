@@ -6,6 +6,12 @@ O resultado final e um painel em Streamlit para apresentar, de forma simples, a 
 
 Os dados e a identidade da organizacao analisada foram anonimizados para fins de portfolio.
 
+## Acesse o painel
+
+O app publicado no Streamlit esta disponivel em:
+
+https://previsao-abertura-empresas.streamlit.app/
+
 ## Sobre este projeto
 
 Este projeto teve origem em um case técnico desenvolvido para uma empresa real durante um processo de avaliação profissional. Para torná-lo adequado para publicação pública e apresentação em portfólio, todas as referências à organização, ao processo seletivo e a quaisquer informações potencialmente sensíveis foram removidas ou anonimizadas.

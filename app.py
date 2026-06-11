@@ -6,19 +6,19 @@ import streamlit as st
 
 
 st.set_page_config(
-    page_title="Forecast Analytics - Projecao 2026",
+    page_title="Previsao de Abertura de Empresas - 2026",
     layout="wide",
 )
 
 BASE_DIR = Path(__file__).parent
 OUTPUTS_DIR = BASE_DIR / "outputs"
 
-AZUL = "#002B6F"
-AZUL_ESCURO = "#06245C"
-CIANO = "#13E0E4"
-CIANO_ESCURO = "#0097B2"
-CINZA_TEXTO = "#1F2A44"
-CINZA_CLARO = "#F5F8FC"
+AZUL = "#1F6F5B"
+AZUL_ESCURO = "#173F3A"
+CIANO = "#D6A84F"
+CIANO_ESCURO = "#9A6B18"
+CINZA_TEXTO = "#27312F"
+CINZA_CLARO = "#F7F6F0"
 CHART_CONFIG = {
     "displayModeBar": False,
     "responsive": True,
@@ -50,37 +50,26 @@ st.markdown(
         }}
 
         .case-hero {{
-            background: {AZUL};
+            background: linear-gradient(135deg, {AZUL_ESCURO} 0%, {AZUL} 72%, #6F7A45 100%);
             color: white;
             padding: 34px 38px;
-            border-radius: 0 0 26px 26px;
+            border-radius: 0 0 18px 18px;
             position: relative;
             overflow: hidden;
             margin-bottom: 26px;
-            box-shadow: 0 18px 35px rgba(0, 43, 111, 0.18);
+            box-shadow: 0 18px 35px rgba(23, 63, 58, 0.18);
         }}
 
         .case-hero:before {{
             content: "";
             position: absolute;
-            width: 190px;
-            height: 190px;
+            width: 230px;
+            height: 230px;
             border-radius: 50%;
-            background: {CIANO};
-            right: -55px;
-            top: -80px;
-            opacity: 0.95;
-        }}
-
-        .case-hero:after {{
-            content: "C.";
-            position: absolute;
-            right: 34px;
-            bottom: 18px;
-            color: white;
-            font-weight: 800;
-            font-size: 34px;
-            letter-spacing: 0;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background: rgba(214, 168, 79, 0.16);
+            right: -82px;
+            top: -96px;
         }}
 
         .brand {{
@@ -140,11 +129,11 @@ st.markdown(
 
         .kpi-card {{
             background: white;
-            border: 1px solid #E4ECF7;
+            border: 1px solid #E5E1D4;
             border-left: 6px solid {CIANO};
             border-radius: 14px;
             padding: 18px 18px 14px;
-            box-shadow: 0 10px 24px rgba(0, 43, 111, 0.08);
+            box-shadow: 0 10px 24px rgba(23, 63, 58, 0.08);
         }}
 
         .kpi-label {{
@@ -165,15 +154,15 @@ st.markdown(
         }}
 
         div[data-testid="stDataFrame"] {{
-            border: 1px solid #E4ECF7;
+            border: 1px solid #E5E1D4;
             border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 10px 24px rgba(0, 43, 111, 0.06);
+            box-shadow: 0 10px 24px rgba(23, 63, 58, 0.06);
         }}
 
         .final-note {{
-            background: #EFFFFF;
-            border: 1px solid #B7F5F6;
+            background: #FFF8E6;
+            border: 1px solid #EAD59A;
             border-left: 6px solid {CIANO};
             color: {AZUL_ESCURO};
             padding: 16px 18px;
@@ -189,12 +178,12 @@ st.markdown(
 
         .mobile-card {{
             background: white;
-            border: 1px solid #E4ECF7;
+            border: 1px solid #E5E1D4;
             border-left: 5px solid {CIANO};
             border-radius: 12px;
             padding: 13px 14px;
             margin-bottom: 10px;
-            box-shadow: 0 8px 18px rgba(0, 43, 111, 0.07);
+            box-shadow: 0 8px 18px rgba(23, 63, 58, 0.07);
         }}
 
         .mobile-card-title {{
@@ -211,7 +200,7 @@ st.markdown(
             color: {CINZA_TEXTO};
             font-size: 13px;
             line-height: 1.45;
-            border-top: 1px solid #EDF2F7;
+            border-top: 1px solid #EFE8DA;
             padding-top: 7px;
             margin-top: 7px;
         }}
@@ -230,10 +219,10 @@ st.markdown(
 
         .chart-wrap {{
             background: white;
-            border: 1px solid #E4ECF7;
+            border: 1px solid #E5E1D4;
             border-radius: 14px;
             padding: 8px 8px 2px;
-            box-shadow: 0 10px 24px rgba(0, 43, 111, 0.06);
+            box-shadow: 0 10px 24px rgba(23, 63, 58, 0.06);
             margin-bottom: 22px;
         }}
 
@@ -250,16 +239,10 @@ st.markdown(
             }}
 
             .case-hero:before {{
-                width: 110px;
-                height: 110px;
-                right: -42px;
-                top: -42px;
-            }}
-
-            .case-hero:after {{
-                right: 18px;
-                bottom: 12px;
-                font-size: 22px;
+                width: 140px;
+                height: 140px;
+                right: -58px;
+                top: -56px;
             }}
 
             .brand {{
@@ -510,13 +493,13 @@ fig_historico.update_layout(
 )
 fig_historico.update_xaxes(
     showgrid=True,
-    gridcolor="#EDF2F7",
+    gridcolor="#EFE8DA",
     tickformat="%Y",
     tickfont=dict(color=AZUL_ESCURO, size=12),
 )
 fig_historico.update_yaxes(
     showgrid=True,
-    gridcolor="#EDF2F7",
+    gridcolor="#EFE8DA",
     tickfont=dict(color=AZUL_ESCURO, size=12),
 )
 st.markdown('<div class="chart-wrap">', unsafe_allow_html=True)
@@ -550,7 +533,7 @@ if {"limite_inferior", "limite_superior"}.issubset(previsao_2026_mensal.columns)
             mode="lines",
             fill="tonexty",
             name="Faixa de incerteza",
-            fillcolor="rgba(19, 224, 228, 0.22)",
+            fillcolor="rgba(214, 168, 79, 0.22)",
             line=dict(width=0),
             hovertemplate="Limite inferior: %{y:,.0f}<extra></extra>",
         )
@@ -587,13 +570,13 @@ if {"limite_inferior", "limite_superior"}.issubset(previsao_2026_mensal.columns)
     )
     fig_incerteza.update_xaxes(
         showgrid=True,
-        gridcolor="#EDF2F7",
+        gridcolor="#EFE8DA",
         tickformat="%b",
         tickfont=dict(color=AZUL_ESCURO, size=12),
     )
     fig_incerteza.update_yaxes(
         showgrid=True,
-        gridcolor="#EDF2F7",
+        gridcolor="#EFE8DA",
         tickfont=dict(color=AZUL_ESCURO, size=12),
     )
     st.markdown('<div class="chart-wrap">', unsafe_allow_html=True)
@@ -660,7 +643,7 @@ fig_meta.update_layout(
 fig_meta.update_xaxes(showgrid=False, tickfont=dict(color=AZUL_ESCURO, size=12))
 fig_meta.update_yaxes(
     showgrid=True,
-    gridcolor="#EDF2F7",
+    gridcolor="#EFE8DA",
     tickfont=dict(color=AZUL_ESCURO, size=12),
 )
 st.markdown('<div class="chart-wrap">', unsafe_allow_html=True)
